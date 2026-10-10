@@ -1,0 +1,463 @@
+/* FitPulse theme: dark gym floor, volt-lime pulse, hot-orange accent */
+:root {
+  --fp-bg: #0E1116;
+  --fp-surface: #171B22;
+  --fp-surface-2: #1F252E;
+  --fp-line: #2A313C;
+  --fp-text: #EEF1F5;
+  --fp-muted: #9AA4B2;
+  --fp-volt: #C6F432;
+  --fp-heat: #FF5A36;
+  --bs-body-bg: var(--fp-bg);
+  --bs-body-color: var(--fp-text);
+  --bs-border-color: var(--fp-line);
+  --bs-link-color: var(--fp-volt);
+  --bs-link-hover-color: #e1ff7a;
+  --bs-link-color-rgb: 198, 244, 50;
+  --bs-link-hover-color-rgb: 225, 255, 122;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--fp-bg);
+  color: var(--fp-text)
+}
+
+h1,
+h2,
+h3,
+h4,
+.display-font {
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  line-height: 1
+}
+
+.text-muted {
+  color: var(--fp-muted) !important
+}
+
+.text-volt {
+  color: var(--fp-volt) !important
+}
+
+.eyebrow {
+  font-size: .78rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--fp-volt);
+  font-weight: 600
+}
+
+/* Buttons */
+.btn {
+  border-radius: .6rem;
+  font-weight: 600
+}
+
+.btn-volt {
+  background: var(--fp-volt);
+  border-color: var(--fp-volt);
+  color: #0E1116
+}
+
+.btn-volt:hover,
+.btn-volt:focus {
+  background: #d8ff55;
+  border-color: #d8ff55;
+  color: #0E1116
+}
+
+.btn-outline-volt {
+  border: 1.5px solid var(--fp-volt);
+  color: var(--fp-volt)
+}
+
+.btn-outline-volt:hover {
+  background: var(--fp-volt);
+  color: #0E1116
+}
+
+.btn-heat {
+  background: var(--fp-heat);
+  border-color: var(--fp-heat);
+  color: #fff
+}
+
+.btn-heat:hover {
+  background: #ff7656;
+  border-color: #ff7656;
+  color: #fff
+}
+
+/* Nav */
+.fp-nav {
+  background: rgba(14, 17, 22, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--fp-line)
+}
+
+.fp-nav .navbar-brand {
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: .04em;
+  color: #fff
+}
+
+.fp-nav .navbar-brand b {
+  color: var(--fp-volt)
+}
+
+.fp-nav .nav-link {
+  color: #c9d0da;
+  font-weight: 500
+}
+
+.fp-nav .nav-link:hover {
+  color: var(--fp-volt)
+}
+
+.fp-logo {
+  width: 34px;
+  height: 34px
+}
+
+/* Carousel hero */
+.fp-carousel .carousel-item {
+  min-height: calc(100vh - 72px);
+  min-height: min(720px, calc(100vh - 72px));
+}
+
+.fp-slide {
+  position: relative;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 5rem 0 6rem
+}
+
+.fp-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--slide-bg);
+  z-index: 0
+}
+
+.fp-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, .035) 0 2px, transparent 2px 38px);
+  z-index: 0
+}
+
+.fp-slide .container {
+  position: relative;
+  z-index: 2
+}
+
+.fp-slide h1 {
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  margin: .6rem 0 1rem
+}
+
+.fp-slide h1 em {
+  font-style: normal;
+  color: var(--fp-volt)
+}
+
+.fp-slide .lead {
+  max-width: 34rem;
+  color: #d3d9e2
+}
+
+.slide-1 {
+  --slide-bg: radial-gradient(60% 80% at 85% 30%, rgba(198, 244, 50, .22), transparent 60%), linear-gradient(135deg, #0E1116 40%, #18210a)
+}
+
+.slide-2 {
+  --slide-bg: radial-gradient(60% 80% at 85% 35%, rgba(255, 90, 54, .30), transparent 60%), linear-gradient(135deg, #0E1116 40%, #2a1108)
+}
+
+.slide-3 {
+  --slide-bg: radial-gradient(60% 80% at 85% 35%, rgba(80, 160, 255, .25), transparent 60%), linear-gradient(135deg, #0E1116 40%, #0b1a2d)
+}
+
+.slide-art {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(34vw, 470px);
+  z-index: 1;
+  opacity: .95
+}
+
+@media(max-width:1199px) {
+  .slide-art {
+    opacity: .14;
+    right: -10%;
+    width: 90vw
+  }
+}
+
+.fp-carousel .carousel-indicators [data-bs-target] {
+  width: 38px;
+  height: 4px;
+  border: 0;
+  border-radius: 2px;
+  background: #fff;
+  opacity: .35
+}
+
+.fp-carousel .carousel-indicators .active {
+  background: var(--fp-volt);
+  opacity: 1
+}
+
+.fp-carousel .carousel-control-prev,
+.fp-carousel .carousel-control-next {
+  width: 6%
+}
+
+.pulse-line path {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: draw 3.2s ease-out infinite
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 900
+  }
+
+  60%,
+  100% {
+    stroke-dashoffset: 0
+  }
+}
+
+/* Sections / cards */
+.section {
+  padding: 5rem 0
+}
+
+.fp-card {
+  background: var(--fp-surface);
+  border: 1px solid var(--fp-line);
+  border-radius: 1rem
+}
+
+.feature-card {
+  padding: 1.6rem;
+  height: 100%;
+  transition: transform .2s, border-color .2s
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--fp-volt)
+}
+
+.feature-card .ico {
+  width: 46px;
+  height: 46px;
+  border-radius: .8rem;
+  background: rgba(198, 244, 50, .12);
+  color: var(--fp-volt);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem
+}
+
+.plan-card {
+  padding: 2rem;
+  height: 100%;
+  position: relative
+}
+
+.plan-card.featured {
+  border-color: var(--fp-volt);
+  box-shadow: 0 0 0 1px var(--fp-volt), 0 20px 50px -20px rgba(198, 244, 50, .35)
+}
+
+.plan-card .price {
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1
+}
+
+.plan-card .badge-top {
+  position: absolute;
+  top: -12px;
+  left: 2rem;
+  background: var(--fp-volt);
+  color: #0E1116;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: .25rem .7rem;
+  border-radius: 2rem
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 1.6rem
+}
+
+.plan-card li {
+  padding: .4rem 0;
+  color: #cbd2dc
+}
+
+.plan-card li::before {
+  content: "✓";
+  color: var(--fp-volt);
+  font-weight: 700;
+  margin-right: .6rem
+}
+
+.fp-footer {
+  border-top: 1px solid var(--fp-line);
+  padding: 2.5rem 0;
+  color: var(--fp-muted);
+  font-size: .9rem
+}
+
+/* Forms (Bootstrap controls, dark) */
+.form-control {
+  background: var(--fp-surface-2);
+  border: 1px solid var(--fp-line);
+  color: var(--fp-text);
+  padding: .7rem .9rem;
+  border-radius: .6rem
+}
+
+.form-control:focus {
+  background: var(--fp-surface-2);
+  color: var(--fp-text);
+  border-color: var(--fp-volt);
+  box-shadow: 0 0 0 .2rem rgba(198, 244, 50, .18)
+}
+
+.form-control::placeholder {
+  color: #6b7482
+}
+
+.form-label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #c9d0da
+}
+
+.form-control.is-invalid {
+  border-color: var(--fp-heat)
+}
+
+/* Auth */
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr
+}
+
+.auth-story {
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: radial-gradient(70% 70% at 80% 20%, rgba(198, 244, 50, .2), transparent 60%), linear-gradient(150deg, #0E1116, #16200a)
+}
+
+.auth-story h1 {
+  font-size: clamp(3rem, 6vw, 5rem)
+}
+
+.auth-story h1 em {
+  font-style: normal;
+  color: var(--fp-volt)
+}
+
+.auth-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px
+}
+
+@media(max-width:900px) {
+  .auth-wrap {
+    grid-template-columns: 1fr
+  }
+
+  .auth-story {
+    padding: 2rem;
+    min-height: 260px
+  }
+}
+
+/* Landing welcome bar + jQuery Validate error styling */
+.welcome-bar {
+  background: linear-gradient(90deg, #1c2410, var(--fp-surface));
+  border-bottom: 1px solid var(--fp-line);
+  padding: .9rem 0
+}
+
+.welcome-bar h2 {
+  font-size: 1.9rem
+}
+
+.welcome-bar h2 span {
+  color: var(--fp-volt)
+}
+
+div.invalid-feedback {
+  color: #ff8f75;
+  font-size: .82rem;
+  margin-top: .3rem
+}
+
+.is-invalid~div.invalid-feedback {
+  display: block
+}
+
+div.invalid-feedback.is-invalid {
+  background: none;
+  padding: 0;
+  border: 0
+}
+
+.is-valid {
+  border-color: #4d6b0f !important
+}
+
+/* selected plan card */
+.btn-check:checked+.btn-outline-light {
+  background: rgba(198, 244, 50, .12);
+  border-color: var(--fp-volt);
+  color: #fff
+}
+
+.btn-check:checked+.btn-outline-light .text-muted {
+  color: var(--fp-volt) !important
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, .08);
+  color: #fff
+}
