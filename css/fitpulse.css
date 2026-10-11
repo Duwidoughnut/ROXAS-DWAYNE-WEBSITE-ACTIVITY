@@ -411,7 +411,7 @@ h4,
   }
 }
 
-/* Landing welcome bar + jQuery Validate error styling */
+/* Landing welcome bar + form error text */
 .welcome-bar {
   background: linear-gradient(90deg, #1c2410, var(--fp-surface));
   border-bottom: 1px solid var(--fp-line);
@@ -430,20 +430,6 @@ div.invalid-feedback {
   color: #ff8f75;
   font-size: .82rem;
   margin-top: .3rem
-}
-
-.is-invalid~div.invalid-feedback {
-  display: block
-}
-
-div.invalid-feedback.is-invalid {
-  background: none;
-  padding: 0;
-  border: 0
-}
-
-.is-valid {
-  border-color: #4d6b0f !important
 }
 
 /* selected plan card */

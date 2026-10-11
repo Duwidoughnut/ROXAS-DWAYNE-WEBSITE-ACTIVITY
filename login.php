@@ -1,3 +1,4 @@
+<?php require 'php/login-process.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +17,6 @@
 
 <body class="auth">
   <?php include 'php/login-auth-wrap.php'?>
-  
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
-    crossorigin="anonymous"></script>
-  <script src="js/validate-defaults.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/fitpulse.js"></script>
-  <script src="js/login.js"></script>
 </body>
 
 </html>

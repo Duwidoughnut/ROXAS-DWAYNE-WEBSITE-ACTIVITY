@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=login.php">
+  <title>FitPulse</title>
+</head>
+
+<body>
+  <script>location.replace("login.php");</script>
+  <a href="login.php">Continue to FitPulse</a>
+</body>
+
+</html>
